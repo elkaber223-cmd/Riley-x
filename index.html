@@ -3,62 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RILEY-X | SMART VIP Hub</title>
+<title>RILEY-X | FF Glitches & VIP Files</title>
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-  body { background: #000; color: #fff; transition: 0.3s; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+  body { background: #000; color: #fff; }
   
-  /* SMART NAV */
+  /* NAVBAR */
   nav {
     background: #0a0a0a; display: flex; justify-content: space-between; 
     align-items: center; padding: 15px 30px; border-bottom: 2px solid #00ff88;
-    position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px);
+    position: sticky; top: 0; z-index: 1000;
   }
-  nav .logo { font-size: 24px; font-weight: bold; color: #00ff88; text-shadow: 0 0 15px #00ff88; }
-  nav .links a { color: #fff; text-decoration: none; margin-left: 20px; transition: 0.3s; }
-  nav .links a:hover { color: #00ff88; text-shadow: 0 0 8px #00ff88; }
-  .theme-btn { background: #00ff88; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+  nav .logo { font-size: 26px; font-weight: bold; color: #00ff88; text-shadow: 0 0 15px #00ff88; }
+  nav .links a { color: #fff; text-decoration: none; margin-left: 25px; font-weight: bold; transition: 0.3s; }
+  nav .links a:hover { color: #00ff88; text-shadow: 0 0 10px #00ff88; }
   
   /* HERO */
-  .hero { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://i.imgur.com/XXXXXXX.jpg') center/cover; padding: 120px 20px; text-align: center; }
-  .hero h1 { font-size: 48px; color: #00ff88; text-shadow: 0 0 25px #00ff88; animation: flicker 2s infinite; }
-  @keyframes flicker { 0%,100%{opacity:1} 50%{opacity:0.7} }
-  .visitor-count { margin-top: 10px; color: #00ccff; font-size: 14px; }
+  .hero { background: #000; padding: 100px 20px; text-align: center; border-bottom:2px solid #00ff88; }
+  .hero h1 { font-size: 52px; color: #00ff88; text-shadow: 0 0 25px #00ff88; animation: flicker 2s infinite; }
+  .hero .sub { font-size: 28px; color: #00ccff; margin: 5px 0 15px; text-shadow: 0 0 10px #00ccff; }
+  .hero p { font-size: 18px; color: #aaa; margin-bottom: 20px; }
+  @keyframes flicker { 0%,100%{opacity:1} 50%{opacity:0.6} }
+  .visitor-count { margin: 15px 0; color: #00ccff; font-size: 14px; }
   
-  .btn { display: inline-block; padding: 14px 24px; margin: 8px; border-radius: 10px; font-weight: bold; text-decoration: none; transition: 0.3s; }
-  .btn-green { background: #00ff88; color: #000; box-shadow: 0 0 20px #00ff88; }
-  .btn-blue { background: #0088ff; color: #fff; box-shadow: 0 0 20px #0088ff; }
-  .btn:hover { transform: translateY(-4px) scale(1.05); }
+  /* BUTTONS */
+  .btn { display: inline-block; padding: 14px 28px; margin: 8px; border-radius: 10px; font-weight: bold; text-decoration: none; transition: 0.3s; font-size:16px; }
+  .btn-green { background: linear-gradient(90deg, #00ff88, #00ccff); color: #000; box-shadow: 0 0 20px #00ff88; }
+  .btn:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 0 35px #00ccff; }
   
   /* PRODUCTS */
   .products { padding: 60px 20px; text-align: center; }
-  .products h2 { font-size: 32px; color: #00ff88; margin-bottom: 30px; text-shadow: 0 0 10px #00ff88; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: auto; }
+  .products h2 { font-size: 34px; color: #00ff88; margin-bottom: 35px; text-shadow: 0 0 10px #00ff88; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1100px; margin: auto; }
   .card {
-    background: #111; border: 1px solid #00ff88; border-radius: 15px; padding: 25px; 
-    box-shadow: 0 0 25px rgba(0,255,136,0.15); transition: 0.4s; position: relative; overflow: hidden;
+    background: #111; border: 2px solid #00ff88; border-radius: 15px; padding: 30px 20px; 
+    box-shadow: 0 0 25px rgba(0,255,136,0.15); transition: 0.4s; position: relative;
   }
-  .card:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(0,255,136,0.4); }
-  .vip-badge { position: absolute; top: 10px; right: 10px; background: #ff0044; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; animation: blink 1s infinite; }
+  .card:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(0,255,136,0.5); }
+  .vip-badge { position: absolute; top: 12px; right: 12px; background: #ff0044; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; animation: blink 1s infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.5} }
-  .price { font-size: 28px; color: #00ccff; font-weight: bold; margin: 12px 0; text-shadow:0 0 10px #00ccff; }
-  .copy-btn { background: #222; color: #00ff88; border: 1px solid #00ff88; padding: 6px 10px; border-radius: 6px; cursor: pointer; margin-top: 10px; transition:0.3s; }
-  .copy-btn:hover { background:#00ff88; color:#000; }
+  .card h3 { color: #00ff88; font-size: 24px; margin-bottom: 10px; }
+  .card p { color: #ccc; font-size: 14px; margin-bottom: 15px; }
+  .price { font-size: 32px; color: #00ccff; font-weight: bold; margin: 12px 0; text-shadow:0 0 10px #00ccff; }
   
   /* FLOATING DM */
   .floating-dm {
     position: fixed; bottom: 25px; right: 25px; background: linear-gradient(90deg, #00ff88, #00ccff);
-    color: #000; padding: 16px 22px; border-radius: 50px; font-weight: bold; text-decoration: none;
-    box-shadow: 0 0 20px #00ff88, 0 0 40px #00ccff; animation: glow 1.5s ease-in-out infinite alternate; z-index: 9999;
+    color: #000; padding: 16px 24px; border-radius: 50px; font-weight: bold; text-decoration: none;
+    box-shadow: 0 0 20px #00ff88, 0 0 40px #00ccff; animation: glow 1.5s ease-in-out infinite alternate; z-index: 9999; font-size:17px;
   }
   @keyframes glow { from { box-shadow: 0 0 15px #00ff88 } to { box-shadow: 0 0 35px #00ccff } }
   
-  /* SMART POPUP */
-  .popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); 
-    background: #111; border: 2px solid #00ff88; padding: 30px; border-radius: 15px; z-index: 10000; box-shadow: 0 0 50px #00ff88; }
-  .popup .close { position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px; color:#ff0044; }
-  
-  footer { background:#0a0a0a; padding:20px; text-align:center; color:#555; border-top:1px solid #222; margin-top:40px; }
+  footer { background:#0a0a0a; padding:20px; text-align:center; color:#555; border-top:1px solid #222; margin-top:40px; font-size:13px; }
 </style>
 </head>
 <body>
@@ -68,13 +64,64 @@
   <div class="links">
     <a href="#">Home</a> 
     <a href="#">Glitches</a> 
-    <a href="#">Templates</a>
+    <a href="#">iPA Files</a>
     <a href="https://t.me/rileycheats">Contact</a>
-    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
   </div>
 </nav>
 
 <section class="hero">
-  <h1>⚡ RILEY-X VIP HUB ⚡</h1>
-  <p>Glitch Art, UI Templates, Productivity Tools - SMARTER THAN THE REST</p>
-  <div class="visitor-count" id="visitors">👁️
+  <h1>⚡ RILEY-X VIP ⚡</h1>
+  <div class="sub">HUB</div>
+  <p>Telegram: @rileycheats</p>
+  <div class="visitor-count" id="visitors">👁️ 128 Visitors Online</div>
+  <a href="https://t.me/rileycheats" class="btn btn-green">📩 DM ME ON TELEGRAM</a>
+</section>
+
+<section class="products">
+  <h2>🔥 VIP PRODUCTS 🔥</h2>
+  <div class="grid">
+    
+    <div class="card">
+      <span class="vip-badge">VIP</span>
+      <h3>Glitch Files Pack</h3>
+      <p>Latest undetectable FF glitches + Full video tutorial</p>
+      <div class="price">$5</div>
+      <a href="https://t.me/rileycheats" class="btn btn-green">DM TO BUY</a>
+    </div>
+    
+    <div class="card">
+      <span class="vip-badge">HOT</span>
+      <h3>Push Up File</h3>
+      <p>Auto headshot + No recoil + Anti ban + 90% HS Rate</p>
+      <div class="price">$10</div>
+      <a href="https://t.me/rileycheats" class="btn btn-green">DM TO BUY</a>
+    </div>
+
+    <div class="card">
+      <h3>Skill Tool Per Bundle</h3>
+      <p>1 Click skill + Instant ability + VIP config included</p>
+      <div class="price">$8</div>
+      <a href="https://t.me/rileycheats" class="btn btn-green">DM TO BUY</a>
+    </div>
+
+    <div class="card">
+      <span class="vip-badge">NEW</span>
+      <h3>Invertodo Pack</h3>
+      <p>Full invert glitch + Ice effect + Private method</p>
+      <div class="price">$15</div>
+      <a href="https://t.me/rileycheats" class="btn btn-green">DM TO BUY</a>
+    </div>
+    
+  </div>
+</section>
+
+<a href="https://t.me/rileycheats" target="_blank" class="floating-dm">💬 DM</a>
+
+<footer>
+  © 2026 RILEY-X. All Rights Reserved.
+</footer>
+
+<script>
+// Live visitor counter
+setInterval(()=>{
+ 
