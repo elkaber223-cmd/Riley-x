@@ -8,7 +8,6 @@
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
   body { background: #000; color: #fff; }
   
-  /* NAVBAR */
   nav {
     background: #0a0a0a; display: flex; justify-content: space-between; 
     align-items: center; padding: 15px 30px; border-bottom: 2px solid #00ff88;
@@ -18,7 +17,6 @@
   nav .links a { color: #fff; text-decoration: none; margin-left: 25px; font-weight: bold; transition: 0.3s; }
   nav .links a:hover { color: #00ff88; text-shadow: 0 0 10px #00ff88; }
   
-  /* HERO */
   .hero { background: #000; padding: 100px 20px; text-align: center; border-bottom:2px solid #00ff88; }
   .hero h1 { font-size: 52px; color: #00ff88; text-shadow: 0 0 25px #00ff88; animation: flicker 2s infinite; }
   .hero .sub { font-size: 28px; color: #00ccff; margin: 5px 0 15px; text-shadow: 0 0 10px #00ccff; }
@@ -26,12 +24,10 @@
   @keyframes flicker { 0%,100%{opacity:1} 50%{opacity:0.6} }
   .visitor-count { margin: 15px 0; color: #00ccff; font-size: 14px; }
   
-  /* BUTTONS */
   .btn { display: inline-block; padding: 14px 28px; margin: 8px; border-radius: 10px; font-weight: bold; text-decoration: none; transition: 0.3s; font-size:16px; }
   .btn-green { background: linear-gradient(90deg, #00ff88, #00ccff); color: #000; box-shadow: 0 0 20px #00ff88; }
   .btn:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 0 35px #00ccff; }
   
-  /* PRODUCTS */
   .products { padding: 60px 20px; text-align: center; }
   .products h2 { font-size: 34px; color: #00ff88; margin-bottom: 35px; text-shadow: 0 0 10px #00ff88; }
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1100px; margin: auto; }
@@ -40,13 +36,11 @@
     box-shadow: 0 0 25px rgba(0,255,136,0.15); transition: 0.4s; position: relative;
   }
   .card:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(0,255,136,0.5); }
-  .vip-badge { position: absolute; top: 12px; right: 12px; background: #ff0044; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; animation: blink 1s infinite; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.5} }
+  .vip-badge { position: absolute; top: 12px; right: 12px; background: #ff0044; padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; }
   .card h3 { color: #00ff88; font-size: 24px; margin-bottom: 10px; }
   .card p { color: #ccc; font-size: 14px; margin-bottom: 15px; }
   .price { font-size: 32px; color: #00ccff; font-weight: bold; margin: 12px 0; text-shadow:0 0 10px #00ccff; }
   
-  /* FLOATING DM */
   .floating-dm {
     position: fixed; bottom: 25px; right: 25px; background: linear-gradient(90deg, #00ff88, #00ccff);
     color: #000; padding: 16px 24px; border-radius: 50px; font-weight: bold; text-decoration: none;
@@ -85,31 +79,31 @@
       <span class="vip-badge">VIP</span>
       <h3>Glitch Files Pack</h3>
       <p>Latest undetectable FF glitches + Full video tutorial</p>
-      <div class="price">$5</div>
-      <a href="https://t.me/rileycheats" class="btn btn-green">DM TO BUY</a>
+      <div class="price">$5 - $10</div>
+      <a href="https://t.me/rileycheats" class="btn btn-green">DM @rileycheats</a>
     </div>
     
     <div class="card">
       <span class="vip-badge">HOT</span>
       <h3>Push Up File</h3>
       <p>Auto headshot + No recoil + Anti ban + 90% HS Rate</p>
-      <div class="price">$10</div>
-      <a href="https://t.me/rileycheats" class="btn btn-green">DM TO BUY</a>
+      <div class="price">$15</div>
+      <a href="https://t.me/rileycheats" class="btn btn-green">DM @rileycheats</a>
     </div>
 
     <div class="card">
       <h3>Skill Tool Per Bundle</h3>
       <p>1 Click skill + Instant ability + VIP config included</p>
-      <div class="price">$8</div>
-      <a href="https://t.me/rileycheats" class="btn btn-green">DM TO BUY</a>
+      <div class="price">$5</div>
+      <a href="https://t.me/rileycheats" class="btn btn-green">DM @rileycheats</a>
     </div>
 
     <div class="card">
       <span class="vip-badge">NEW</span>
       <h3>Invertodo Pack</h3>
       <p>Full invert glitch + Ice effect + Private method</p>
-      <div class="price">$15</div>
-      <a href="https://t.me/rileycheats" class="btn btn-green">DM TO BUY</a>
+      <div class="price">$5</div>
+      <a href="https://t.me/rileycheats" class="btn btn-green">DM @rileycheats</a>
     </div>
     
   </div>
@@ -118,10 +112,14 @@
 <a href="https://t.me/rileycheats" target="_blank" class="floating-dm">💬 DM</a>
 
 <footer>
-  © 2026 RILEY-X. All Rights Reserved.
+  © 2026 RILEY-X. Contact: @rileycheats
 </footer>
 
 <script>
-// Live visitor counter
 setInterval(()=>{
- 
+  document.getElementById('visitors').innerText = `👁️ ${Math.floor(Math.random()*200+100)} Visitors Online`
+}, 5000)
+</script>
+
+</body>
+</html>
