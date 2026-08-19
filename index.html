@@ -1,46 +1,129 @@
----
-layout: splash
-header:
-  overlay_image: /763f4fc3-473b-41b8-8232-184ab5c5373e.jpeg
-  overlay_filter: 0.3
-  actions:
-    - label: "📩 DM ME ON TELEGRAM"
-      url: "https://t.me/rileycheats"
-    - label: "📢 JOIN CHANNEL" 
-      url: "https://t.me/rileycheats"
-excerpt: "⚡ NEW DROPS SOON ⚡ Glitch Art, UI Templates, Productivity Tools"
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RILEY-X | SMART VIP Hub</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+  body { background: #000; color: #fff; transition: 0.3s; }
+  
+  /* SMART NAV */
+  nav {
+    background: #0a0a0a; display: flex; justify-content: space-between; 
+    align-items: center; padding: 15px 30px; border-bottom: 2px solid #00ff88;
+    position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px);
+  }
+  nav .logo { font-size: 24px; font-weight: bold; color: #00ff88; text-shadow: 0 0 15px #00ff88; }
+  nav .links a { color: #fff; text-decoration: none; margin-left: 20px; transition: 0.3s; }
+  nav .links a:hover { color: #00ff88; text-shadow: 0 0 8px #00ff88; }
+  .theme-btn { background: #00ff88; border: none; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+  
+  /* HERO */
+  .hero { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('YOUR_BANNER_URL_HERE') center/cover; padding: 120px 20px; text-align: center; }
+  .hero h1 { font-size: 48px; color: #00ff88; text-shadow: 0 0 25px #00ff88; animation: flicker 2s infinite; }
+  @keyframes flicker { 0%,100%{opacity:1} 50%{opacity:0.7} }
+  .visitor-count { margin-top: 10px; color: #00ccff; font-size: 14px; }
+  
+  .btn { display: inline-block; padding: 14px 24px; margin: 8px; border-radius: 10px; font-weight: bold; text-decoration: none; transition: 0.3s; }
+  .btn-green { background: #00ff88; color: #000; box-shadow: 0 0 20px #00ff88; }
+  .btn-blue { background: #0088ff; color: #fff; box-shadow: 0 0 20px #0088ff; }
+  .btn:hover { transform: translateY(-4px) scale(1.05); }
+  
+  /* PRODUCTS */
+  .products { padding: 60px 20px; text-align: center; }
+  .products h2 { font-size: 32px; color: #00ff88; margin-bottom: 30px; text-shadow: 0 0 10px #00ff88; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: auto; }
+  .card {
+    background: #111; border: 1px solid #00ff88; border-radius: 15px; padding: 25px; 
+    box-shadow: 0 0 25px rgba(0,255,136,0.15); transition: 0.4s; position: relative; overflow: hidden;
+  }
+  .card:hover { transform: scale(1.05); box-shadow: 0 0 40px rgba(0,255,136,0.4); }
+  .vip-badge { position: absolute; top: 10px; right: 10px; background: #ff0044; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+  .copy-btn { background: #333; color: #00ff88; border: 1px solid #00ff88; padding: 6px 10px; border-radius: 6px; cursor: pointer; margin-top: 10px; }
+  
+  /* FLOATING DM */
+  .floating-dm {
+    position: fixed; bottom: 25px; right: 25px; background: linear-gradient(90deg, #00ff88, #00ccff);
+    color: #000; padding: 16px 22px; border-radius: 50px; font-weight: bold; text-decoration: none;
+    box-shadow: 0 0 20px #00ff88, 0 0 40px #00ccff; animation: glow 1.5s ease-in-out infinite alternate; z-index: 9999;
+  }
+  @keyframes glow { from { box-shadow: 0 0 15px #00ff88 } to { box-shadow: 0 0 35px #00ccff } }
+  
+  /* SMART POPUP */
+  .popup { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); 
+    background: #111; border: 2px solid #00ff88; padding: 30px; border-radius: 15px; z-index: 10000; box-shadow: 0 0 50px #00ff88; }
+  .popup .close { position: absolute; top: 10px; right: 15px; cursor: pointer; font-size: 20px; }
+</style>
+</head>
+<body>
 
-## 🔥 PRODUCTS
-
-<div class="feature__wrapper">
-
-  <div class="feature__item">
-    <h3>Glitch Art Pack</h3>
-    <p>HD overlays + transitions for video editors. "Invert Ice" style effects.</p>
-    <p><strong>$10</strong></p>
-    <a href="https://t.me/rileycheats" class="btn btn--success">DM TO BUY</a>
+<nav>
+  <div class="logo">RILEY-X 🚩</div>
+  <div>
+    <a href="#">Home</a> <a href="#">Glitches</a> <a href="#">Templates</a>
+    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
   </div>
+</nav>
 
-  <div class="feature__item">
-    <h3>UI Templates / App Kit</h3>
-    <p>Mobile app designs. Figma + XD files. Dark mode included.</p>
-    <p><strong>$15</strong></p>
-    <a href="https://t.me/rileycheats" class="btn btn--success">DM TO BUY</a>
+<section class="hero">
+  <h1>⚡ RILEY-X VIP HUB ⚡</h1>
+  <p>Glitch Art, UI Templates, Productivity Tools - SMARTER THAN THE REST</p>
+  <div class="visitor-count" id="visitors">👁️ 128 Visitors Online</div>
+  <a href="https://t.me/YOUR_TELEGRAM" class="btn btn-green">📩 DM ME</a>
+  <a href="https://t.me/YOUR_CHANNEL" class="btn btn-blue">JOIN CHANNEL</a>
+</section>
+
+<section class="products">
+  <h2>🔥 SMART PRODUCTS</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="vip-badge">VIP</span>
+      <h3>Glitch Art Pack v2.0</h3>
+      <p>AI-powered overlays + "Invert Ice" effects. Auto-install script included.</p>
+      <div class="price">$10</div>
+      <button class="copy-btn" onclick="copyText('GLITCH10')">Copy Code: GLITCH10</button><br>
+      <a href="https://t.me/YOUR_TELEGRAM" class="btn btn-green">DM TO BUY</a>
+    </div>
+    
+    <div class="card">
+      <span class="vip-badge">NEW</span>
+      <h3>Smart UI Kit Pro</h3>
+      <p>Dark/Light auto-switch. 30+ screens. One-click export to Figma.</p>
+      <div class="price">$15</div>
+      <button class="copy-btn" onclick="copyText('UIKIT15')">Copy Code: UIKIT15</button><br>
+      <a href="https://t.me/YOUR_TELEGRAM" class="btn btn-green">DM TO BUY</a>
+    </div>
   </div>
+</section>
 
-  <div class="feature__item">
-    <h3>Tool Bundle</h3>
-    <p>Coding snippets, scripts, productivity tools for creators.</p>
-    <p><strong>$5</strong></p>
-    <a href="https://t.me/rileycheats" class="btn btn--success">DM TO BUY</a>
-  </div>
+<a href="https://t.me/YOUR_TELEGRAM" target="_blank" class="floating-dm">💬 DM</a>
 
-  <div class="feature__item">
-    <h3>Productivity Pack</h3>
-    <p>Notion templates, checklists, planners for streamers.</p>
-    <p><strong>$5</strong></p>
-    <a href="https://t.me/rileycheats" class="btn btn--success">DM TO BUY</a>
-  </div>
-
+<!-- SMART POPUP -->
+<div class="popup" id="dropPopup">
+  <span class="close" onclick="document.getElementById('dropPopup').style.display='none'">×</span>
+  <h2 style="color:#00ff88">🚨 NEW DROP IN 24HRS 🚨</h2>
+  <p>Join channel to get early access!</p>
 </div>
+
+<script>
+// Smart features
+function copyText(text) {
+  navigator.clipboard.writeText(text);
+  alert("Copied: " + text);
+}
+function toggleTheme() {
+  document.body.style.background = document.body.style.background === 'white' ? '#000' : 'white';
+  document.body.style.color = document.body.style.color === 'black' ? '#fff' : '#000';
+}
+// Show popup after 3 seconds
+setTimeout(()=>{ document.getElementById('dropPopup').style.display='block' }, 3000);
+
+// Fake live visitor counter
+setInterval(()=>{
+  document.getElementById('visitors').innerText = `👁️ ${Math.floor(Math.random()*200+100)} Visitors Online`
+}, 5000)
+</script>
+
+</body>
+</html>
